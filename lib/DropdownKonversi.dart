@@ -20,7 +20,7 @@ class DropdownKonversi extends StatelessWidget {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(value),
-        );
+        ); //untuk menampilkan semua data yang ada di listitem
       }).toList(),
       value: _valueDropDown,
       onChanged: dropDownChange,

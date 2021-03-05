@@ -91,6 +91,7 @@ class _MyAppState extends State<MyApp> {
   void dropDownChange(String changeValue) {
     setState(() {
       _valueDropDown = changeValue;
+      konversiSuhu();
     });
   }
 }

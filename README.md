@@ -1,6 +1,7 @@
 # jobsheet4
 
 A new Flutter project.
+![plot](./images/ss.PNG)
 
 ## Getting Started
 

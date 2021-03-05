@@ -30,20 +30,22 @@ class _MyAppState extends State<MyApp> {
   double result = 0;
   void konversiSuhu() {
     setState(() {
-      nCelcius = double.parse(etCelcius.text);
+      nCelcius = double.parse(
+          etCelcius.text); // dirubah dari string ke double menggunakan parse
       if (_valueDropDown == "Kelvin") {
         result = nCelcius + 273;
-        listViewItem.insert(0, "Kelvin : " + result.toStringAsFixed(2));
+        listViewItem.insert(0, "Kelvin : " + result.toStringAsFixed(1));
       } else if (_valueDropDown == "Reamur") {
         result = (4 / 5) * nCelcius;
         listViewItem.insert(
             0,
             "Reamur : " +
-                result.toStringAsFixed(2)); // untuk menampung hasil perhitungan
+                result.toStringAsFixed(1)); // untuk menampung hasil perhitungan
 
-      } else
+      } else {
         result = ((9 / 5) * nCelcius) + 32;
-      listViewItem.insert(0, "Fahrenheit : " + result.toStringAsFixed(2));
+        listViewItem.insert(0, "Fahrenheit : " + result.toStringAsFixed(1));
+      }
     });
   }
 
